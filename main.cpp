@@ -103,7 +103,8 @@ int readADC_SingleEnded(int fd, int channel) {
 
     val = readBuf[0] << 8 | readBuf[1]; // Combine the two bytes of readBuf into a single 16 bit result 
 
-    printf("Voltage Reading %f (V) \n", (float) val * 4.096 / 32767.0); // Print the result to terminal, first convert from binary value to mV
+    //Only for debugging sessions
+    //printf("Voltage Reading %f (V) \n", (float) val * 4.096 / 32767.0); // Print the result to terminal, first convert from binary value to mV
 
     close(I2CFile);
     return val;
@@ -136,8 +137,8 @@ float get_Probe_mV(int i2c_Address, int i2c_Port) {
         }
     } else {
         //normal case
-        return readADC_SingleEnded(i2c_Address, i2c_Port) * 4.096 / 32767.0;
-
+        return readADC_SingleEnded(i2c_Address, i2c_Port) * 4.096 / 32767.0 * 1000;
+        //return (((float) readADC_SingleEnded(i2c_Address, i2c_Port) / 4096) * 3.3) * 1000;
     }
 
 }

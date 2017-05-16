@@ -35,8 +35,9 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}" i2c_Address 77</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" /sys/devices/w1_bus_master1/28-051690467fff/w1_slave 77 4</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" /sys/devices/w1_bus_master1/28-051690467fff/w1_slave 77 7</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" /sys/devices/w1_bus_master1/28-051690467fff/w1_slave 72:0 7</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" /sys/devices/w1_bus_master1/28-051690467fff/w1_slave 77 7</runcommand>
+        <runcommand>"${OUTPUT_PATH}" /sys/devices/w1_bus_master1/28-051690467fff/w1_slave 72:0 7</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
