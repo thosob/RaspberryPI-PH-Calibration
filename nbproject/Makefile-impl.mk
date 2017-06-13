@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Aqualight-PhController-Calibrator
+PROJECTNAME=RaspberryPI-PH-Calibration
 
 # Active Configuration
 DEFAULTCONF=Debug
